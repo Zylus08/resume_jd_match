@@ -4,6 +4,8 @@ from parser import extract_text
 from embedder import get_embedding
 from matcher import create_index, add_to_index, search
 import os
+os.environ["OMP_NUM_THREADS"] = "1"
+os.environ["MKL_NUM_THREADS"] = "1"
 
 app = FastAPI()
 
